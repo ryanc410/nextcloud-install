@@ -75,7 +75,7 @@ sudo apt install mariadb-server mariadb-client
 sudo systemctl start mariadb && sudo systemctl enable mariadb
 
 # Mysql secure installation
-mysql <<BASH_QUERY
+sudo mysql << BASH_QUERY
 SET PASSWORD FOR root@localhost = PASSWORD('$MYSQL_ROOT_PW');
 FLUSH PRIVILEGES;
 DELETE FROM mysql.user WHERE User='';
@@ -106,7 +106,7 @@ sudo unzip nextcloud-22.1.0.zip -d /var/www/
 
 sudo chown www-data:www-data /var/www/nextcloud/ -R
 
-sudo mysql<<_QUERY
+sudo mysql<< _QUERY
 create database nextcloud;
 create user $nextcloud_user@localhost identified by '$ncuser_pass';
 grant all privileges on nextcloud.* to $nextcloud_user@localhost identified by '$ncuser_pass';
@@ -114,7 +114,7 @@ flush privileges;
 exit;
 _QUERY
 
-cat <<- _EOF_ >> /etc/apache2/sites-available/nextcloud.conf
+cat << _EOF_ >> /etc/apache2/sites-available/nextcloud.conf
 <VirtualHost $ip:80>
         DocumentRoot "/var/www/nextcloud"
         ServerName $domain
@@ -189,8 +189,3 @@ sudo systemctl restart apache2 php7.4-fpm
 sudo sed -i 's/upload_max_filesize = 2M/upload_max_filesize = 1024M/g' /etc/php/7.4/fpm/php.ini
 
 sudo systemctl restart php7.4-fpm
-
-
-
-
-
