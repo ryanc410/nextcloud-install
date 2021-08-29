@@ -26,6 +26,7 @@ check_os()
         echo "Script is not compatible with your OS."
         sleep 3
         exit 1
+    fi
 }
 pub_ip()
 {
