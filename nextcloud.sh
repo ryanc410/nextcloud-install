@@ -41,7 +41,7 @@ title()
     echo "#########################################"
     echo "#    Nextcloud Auto Installer Script    #"
     echo "#########################################"
-    echo "
+    echo ""
 }
 
 check_os
