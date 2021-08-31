@@ -69,7 +69,7 @@ sudo a2enconf servername.conf
 sudo systemctl reload apache2
 
 # Install Mariadb server
-sudo apt install mariadb-server mariadb-client
+sudo apt install mariadb-server mariadb-client -y
 
 # Start and enable mariadb server
 sudo systemctl start mariadb && sudo systemctl enable mariadb
