@@ -174,7 +174,7 @@ sudo systemctl reload apache2
 
 sed -i '$ d' /var/www/nextcloud/config/config.php
 
-cat << _EOF_ >> /var/www/nextcloud/config/config.php
+cat <<_EOF_>> /var/www/nextcloud/config/config.php
 'memcache.distributed' => '\OC\Memcache\Redis',
 'memcache.local' => '\OC\Memcache\Redis',
 'memcache.locking' => '\OC\Memcache\Redis',
