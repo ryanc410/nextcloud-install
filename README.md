@@ -13,20 +13,20 @@ Make script executable:<br>
 Open script in your preferred text editor and  fill in the variables at the top:<br>
 ***nano nextcloud.sh***<br>
 
-## **Variables**<br>
-**DOMAIN**
-***This is the domain name that will be used to access the nextcloud instance.***
+## Variables
+#### DOMAIN
+This is the domain name that will be used to access the nextcloud instance.
 
-**DB_ROOT_PW**
-***This is the Mysql Database Server root user's password.*** 
+#### DB_ROOT_PW
+This is the Mysql Database Server root user's password.
 
-#### **DB_USER**
-***Nextcloud database username
+#### DB_USER
+Nextcloud database username
 
-#### **DB_USER_PASS**
-***The password for the nextcloud database user***
+#### DB_USER_PASS
+The password for the nextcloud database user
 
-Save and close the file<br>
-***CTRL-X then Y***<br>
+## Save and close the file
+CTRL-X then Y<br>
 Run the script<br>
 ***./nextcloud.sh***<br>
