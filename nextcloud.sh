@@ -157,19 +157,6 @@ phpenmod redis
 
 systemctl reload apache2
 
-sed -i '$ d' /var/www/nextcloud/config/config.php
-
-cat << _EOF_ >> /var/www/nextcloud/config/config.php
-'memcache.distributed' => '\OC\Memcache\Redis',
-'memcache.local' => '\OC\Memcache\Redis',
-'memcache.locking' => '\OC\Memcache\Redis',
-'redis' => array(
-     'host' => 'localhost',
-     'port' => 6379,
-     ),
-);
-_EOF_
-
 sed -i 's/upload_max_filesize = 2M/upload_max_filesize = 1024M/g' /etc/php/7.4/fpm/php.ini
 
 systemctl restart apache2 php7.4-fpm
