@@ -91,7 +91,7 @@ GRANT ALL PRIVILEGES ON nextcloud.* TO '$DB_USER'@'localhost';
 FLUSH PRIVILEGES;
 BASH_QUERY
 
-apt install php7.4-{mysql,cli,common,json,opcache,readline} php-common libapache2-mod-php7.4 -y
+apt install php7.4-{mysql,cli,common,json,opcache,readline,mbstring,zip,dom,xml,gd,curl} php-common libapache2-mod-php7.4 -y
 
 a2dismod php7.4
 
