@@ -4,13 +4,20 @@ Written by [Ryan C](mailto:ryanhtown713@outlook.com)
 
 ---
 # Table of Contents
-[Pre Requisites](#Pre-Requisites)
+<ul>
+  <li><a href="#pre-requisites">Pre Requisites</a></li>
+  <li><a href="#cloning-the-repository">Cloning the Repository</a></li>
+  <li><a href="#usage">Usage</a></li>
+  <li><a href="#options">Options</a></li>
+  <li><a href="#dns">DNS Settings</a></li>
+</ul>
+
 # Pre Requisites
 1. Preferably a fresh install of Ubuntu Server version >= 18
 2. DNS record for a nextcloud subdomain. Script automatically installs nextcloud in a subdomain of the domain specified when executing script.
 3. The ability to execute commands with root privileges or using the sudo command.
 ---
-### Cloning the Repository
+### Cloning the Repository (#cloning)
 ````bash
 git clone https://github.com/ryanc410/nextcloud-install-script.git
 Cloning into 'nextcloud-install-script'...
@@ -68,7 +75,7 @@ The script updates the server first, then installs a LAMP Stack.
 - ***setenvif*** 
 - ***ssl***
 ---
-### Possible Options to Pass when executing
+### Options
 **Specifying the Domain**
 `./nextcloud.sh -d [arg]` or `./nextcloud.sh --domain [arg]`
 An acceptable argument to the domain option would be `example.com` or `example.org` or `example.site` etc.
